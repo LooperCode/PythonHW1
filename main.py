@@ -1,26 +1,18 @@
-from decimal import Decimal
-a = Decimal(input('Введите число: '))
-temp = a
-if a < 0:
-    a = abs(a)
-s = a
-b = s * 10
-b %= 10
-b /= 10
-e = round(b, 10)
-while e != int(e):
-    e *= 100
-e = int(e)
-sumFloat = 0
-while e != 0:
-    sumFloat += e % 10
-    e //= 10
-a = int(a)
-while a != 0:
-    sumFloat += a % 10
-    a //= 10
-if temp < 0:    
-    print(-sumFloat)
-elif temp > 0:
-    print(sumFloat)
-    
+a = (input("Введите номер билета: "))
+sum = a[0:3]
+sum2 = a[-3:]
+sum = int(sum); sum2 = int(sum2)
+n = 0
+while sum != 0:
+    n += sum % 10
+    sum = sum // 10
+sum = n
+n = 0
+while sum2 != 0:
+    n += sum2 % 10
+    sum2 = sum2 // 10 
+sum2 = n
+if sum == sum2:
+    print("Билет является счастливым.")
+elif sum != sum2:
+    print("Билет не является счастливым.")
