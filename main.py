@@ -14,5 +14,5 @@ while sum2 != 0:
 sum2 = n
 if sum == sum2:
     print("Билет является счастливым.")
-elif sum != sum2:
+else:
     print("Билет не является счастливым.")
